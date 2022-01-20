@@ -8,19 +8,21 @@ let eta = prompt ('inserisci la tua età');
 
 //prezzo del viaggio 0.21 al km
 
-let prezzo = (km * 0,21);
-document.getElementById('prezzo').innerHTML=prezzo
+let prezzoBase = (km * 0,21);
 
 //20% minorenni - 40% over65
 
 if  (eta < 18) { 
-    let prezzo = prezzo - prezzo * 20/100
+    var prezzo = prezzoBase - prezzoBase * 20/100
 
 } else if (eta > 65) {
-    let prezzo = prezzo - prezzo * 40/100
-
+    var prezzo = prezzoBase - prezzoBase * 40/100
 
 } else {
+    var prezzo = prezzoBase
 
 }
+
+document.getElementById('prezzo').innerHTML=prezzo
+
 
